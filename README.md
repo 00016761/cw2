@@ -4,8 +4,8 @@
 # My application is for managing students in event to write students' name and surname, built using Node.js and Express.js. Application create, update, and delete students with the help of user interface(by EJS)
 
 ## Run application:
-1. Clone it from github:   git clone   ////////git repo link
-2. Enter to the project:   cd  //// name of project   todo-list-app
+1. Clone it from github:   git clone https://github.com/00016761/cw2.git
+2. Enter to the project:   cd cw2
 3. Install dependencies:  npm install
 4. Start the server:   npm run start(:dev for dev mode)
 5. Open  web browser and go to http://localhost:7001.
@@ -22,7 +22,7 @@ The application depends on the following components:
 # Install dependencies: npm install express ejs cors dotenv joi body-parser
 
 ## Links:
-- [Public Repo on GitHub](--)
+- [Public Repo on GitHub]('https://github.com/00016761/cw2.git')
 - [Hosted Application](--)
 
 
