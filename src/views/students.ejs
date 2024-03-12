@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container welcomePage">
+        <h1>Welcome!!!</h1>
+    </div>
+
+    <div class="container">
+        <div class="container">
+            <h2>Create a student</h2>
+
+            <form action="/api/student" method="post" enctype="application/x-www-form-urlencoded">
+                <input name="name" type="text" placeholder="Name">
+                <input name="surename" type="text" placeholder="Surename">
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <h2>All students</h2>
+        <div class="students">
+            <% allStudents.map(st => { %>
+                <div class="single_student", student-id="<%= st.id %>">
+                    <div class="name">
+                        <p><%= st.name %></p>
+                        <input type="text" class="edit-input" value="<%= st.name %>" style="display: none;">
+                    </div>
+                    <div class="surename">
+                        <p><%= st.surename %></p>
+                        <input type="text" class="edit-input" value="<%= st.surename %>" style="display: none;">
+                    </div>
+                    <div>
+                        <button class="edit-button">Edit</button>
+                        <button class="save-button" style="display: none;">Save</button>
+                    </div>
+                    <div>
+                        <button class="delete-button">Delete</button>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    <script src="/assets/app.js"></script>
+</body>
+
+</html>
