@@ -17,6 +17,11 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(cors())
 app.use('/api', routes)
+app.use('/', () => {
+    return res.json({
+        message: `This for Web Technology coursework`
+    })
+})
 app.use('/*', (_, res) => {
     return res.json({
         message: `Error with routing`
@@ -24,4 +29,4 @@ app.use('/*', (_, res) => {
 })
 app.use(ErrorHandlerMiddleware)
 
-app.listen(9000)
+app.listen(7001)
